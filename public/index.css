@@ -1,0 +1,54 @@
+body {
+  	background-color: #000;
+  	color: #55ff55;
+  	font-family: monospace;
+  	line-height: 1.4;
+}
+
+article {
+	margin-bottom: 30px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a,
+a:visited {
+	color: #fff;
+}
+
+a.active {
+	color: #55ff55;
+}
+
+.navigation {
+	border-bottom: 1px solid #55ff55;
+}
+
+.navigation ul {
+	padding-left: 0;
+}
+
+.navigation ul li {
+	display: inline;
+	list-style: none;
+}
+
+.navigation a {
+	color: #55ff55;
+	display: inline-block;
+	padding: 5px;
+	transition: background-color 100ms;
+	text-decoration: none;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+	background-color: #55ff55;
+	color: #000;
+}
+
+.sectionTitle {
+	text-transform: capitalize;
+}

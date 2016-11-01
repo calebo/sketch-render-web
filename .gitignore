@@ -1,0 +1,13 @@
+/build
+
+/public
+
+/node_modules
+
+npm-debug.log
+
+*.swp
+
+server.bundle.js
+
+bundle.js

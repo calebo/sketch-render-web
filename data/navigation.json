@@ -1,0 +1,26 @@
+[
+  {
+    "path": "entertainment",
+    "name": "Entertainment"
+  }, {
+    "path": "news",
+    "name": "News"
+  }, {
+    "path": "world",
+    "name": "World"
+  }, {
+    "path": "sport",
+    "name": "Sport",
+    "subnav": [{
+      "path": "nrl",
+      "name": "NRL"
+    }, {
+      "path": "afl",
+      "name": "AFL"
+    }, {
+      "path": "cycling",
+      "name": "Cycling"
+    }]
+  }
+
+]

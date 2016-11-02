@@ -1,3 +1,4 @@
+var LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 var webpack = require('webpack')
 
 module.exports = {
@@ -11,7 +12,7 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.js$/, loader: "babel-loader", exclude: /node_modules/, query: { presets: ['es2015', 'react'] } },
+      { test: /\.js$/, loader: "babel-loader", exclude: /node_modules/, query: { plugins: ['lodash'], presets: ['es2015', 'react'] } },
       // { test: /\.css$/, loader: ExtractTextPlugin.extract(
       //   'style-loader', 
       //   'css-loader?modules&importLoaders=1&localIdentName=[local]___[hash:base64:5]!postcss-loader'
@@ -22,6 +23,7 @@ module.exports = {
   },
 
   plugins: process.env.NODE_ENV === 'production' ? [
+    new LodashModuleReplacementPlugin,
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin()

@@ -9,10 +9,13 @@ export default React.createClass({
     		<h1>Home</h1>
 
 			{data.map((item, i) => (
-				<article key={i} data-id={item.id}>
-					<Link to={item.slug}><h3>{item.title}</h3></Link>
-				</article>
+			<article key={i} data-id={item.id}>
+				<Link to={item.slug}>
+					<h3>{item.title} | <span>{item.category}</span></h3>
+				</Link>
+			</article>
 			))}
+
     	</div>
 	)
   }

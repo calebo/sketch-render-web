@@ -1,26 +1,32 @@
-import React from 'react';
-import { Link } from 'react-router';
-import NavLink from './NavLink';
-import nav from '!json!../data/navigation.json';
+import React from 'react'
+import { Link } from 'react-router'
+import NavLink from './NavLink'
+import NavData from '!json!../data/navigation.json'
+
+import _map from 'lodash/map'
+import _lowerCase from 'lodash/lowercase'
+import _flatten from 'lodash/flatten'
 
 export default class Navigation extends React.Component {
 	render() {
-		return (
+		return (			
 			<nav className="navigation">
-			<ul>
-				{nav.map((item, i) => (
-				<li key={i}>
-					<NavLink to={item.path}>{item.name}</NavLink>
-					{/* item.subnav && <SubNavigation items={item.subnav}/> */}
-				</li>
-				))}
-			</ul>
+				<ul>
+					{navItems.map((item, i) => (
+					<li key={i}>
+						<NavLink to={item}>{item}</NavLink>
+						{ item.subsections && <SecondaryNavigation items={item.subsections}/> }
+					</li>
+					))}
+				</ul>
 			</nav>
 		)
 	}
 }
 
-const SubNavigation = (props) => {
+var navItems = _map(NavData.data.attributes, 'name');
+
+const SecondaryNavigation = (props) => {
 	return (
 		<ul>
 			{props.items.map((item, i) => (

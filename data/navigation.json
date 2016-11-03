@@ -13,19 +13,16 @@
       },
       {
         "name": "Sport",
-        "subsections": null
-      },
-      {
-        "name": "News",
-        "subsections": null
-      },
-      {
-        "name": "NSW",
-        "subsections": null
-      },
-      {
-        "name": "Sport",
-        "subsections": null
+        "subsections": [
+          {
+            "name": "Basketball",
+            "subsections": null
+          },
+          {
+            "name": "Boxing",
+            "subsections": null
+          }
+        ]
       }
     ],
     "relationships": null
